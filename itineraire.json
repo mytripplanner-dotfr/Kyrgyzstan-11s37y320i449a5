@@ -1,0 +1,461 @@
+{
+  "pays": "Kirghizistan",
+  "drapeau": "🇰🇬",
+  "symbole": "🐎",
+  "titre": "L'Appel des Montagnes Célestes : Aventure au Kirghizistan",
+  "budget_total": "3000€",
+  "duree": "15 jours",
+  "temps_vol": "12h avec escale depuis Paris, France",
+  "jours": [
+    {
+      "jour": 1,
+      "symbole": "🛬",
+      "titre": "Arrivée à Bichkek, Porte de l'Asie Centrale",
+      "legende": "Après un long voyage, la capitale kirghize vous accueille avec son mélange d'architecture soviétique et de touches nomades. Prenez le temps de vous installer et de faire une première immersion douce dans l'ambiance locale. La journée sera légère pour vous permettre de récupérer du décalage horaire et de vous préparer aux aventures à venir.",
+      "lieu": "Bichkek",
+      "activites": [
+        "🛬 <strong>Arrivée à l'aéroport de Manas (FRU)</strong>: Atterrissage à Bichkek, formalités d'entrée et transfert vers votre hôtel. Profitez du trajet pour observer les premiers paysages kirghizes.",
+        "🛏️ <strong>Installation à l'hôtel et repos</strong>: Prenez le temps de vous rafraîchir et de vous détendre après le vol. Votre hôtel 3 étoiles offre tout le confort nécessaire pour une bonne récupération.",
+        "🚶‍♂️ <strong>Balade légère au Parc Panfilov</strong>: Une promenade relaxante dans ce parc verdoyant vous permettra de vous dégourdir les jambes et d'observer la vie locale en toute tranquillité."
+      ],
+      "illustration": "jour1.jpg",
+      "encarts": [
+        {
+          "symbole": "ℹ️",
+          "titre": "À savoir",
+          "texte": "Le Kirghizistan est un pays montagneux, préparez-vous à des paysages grandioses et à des altitudes variées. L'hospitalité est une valeur fondamentale ici."
+        },
+        {
+          "symbole": "💡",
+          "titre": "Conseil",
+          "texte": "Changez un peu d'argent à l'aéroport pour les premières dépenses, mais les taux sont souvent meilleurs en ville. La monnaie est le Som kirghize (KGS)."
+        }
+      ]
+    },
+    {
+      "jour": 2,
+      "symbole": "🏛️",
+      "titre": "Découverte de Bichkek, entre histoire et modernité",
+      "legende": "Explorez le cœur de la capitale kirghize, où l'héritage soviétique côtoie la culture nomade. Des places imposantes aux marchés animés, Bichkek offre un aperçu fascinant de l'histoire et de la vie quotidienne du pays. Préparez-vous à une journée riche en découvertes culturelles et architecturales.",
+      "lieu": "Bichkek",
+      "activites": [
+        "🏛️ <strong>Visite de la Place Ala-Too</strong>: Admirez le drapeau géant et le monument de Manas, héros national. C'est le centre névralgique de la ville, souvent le théâtre d'événements importants.",
+        "🛍️ <strong>Exploration du Bazar d'Osh</strong>: Plongez dans l'ambiance vibrante de ce marché traditionnel. Vous y trouverez de tout, des épices aux vêtements, en passant par l'artisanat local, une véritable immersion sensorielle.",
+        "🖼️ <strong>Musée Historique d'État</strong>: Découvrez l'histoire riche du Kirghizistan, de l'Antiquité à l'ère soviétique. Ses collections offrent un aperçu précieux des cultures nomades et des événements marquants du pays."
+      ],
+      "illustration": "jour2.jpg",
+      "encarts": [
+        {
+          "symbole": "🚶‍♀️",
+          "titre": "Transport",
+          "texte": "Bichkek est une ville relativement facile à explorer à pied ou en taxi. Les applications comme Yandex Go sont pratiques et abordables."
+        },
+        {
+          "symbole": "🍲",
+          "titre": "Gastronomie",
+          "texte": "Goûtez au \"Beshbarmak\", plat national à base de viande et de nouilles, ou au \"Lagman\", des nouilles étirées à la main avec légumes et viande."
+        }
+      ]
+    },
+    {
+      "jour": 3,
+      "symbole": "🏞️",
+      "titre": "Évasion vers le Parc National d'Ala Archa",
+      "legende": "Laissez derrière vous l'agitation de la ville pour vous immerger dans la splendeur naturelle du Parc National d'Ala Archa. Situé à une courte distance de Bichkek, ce joyau montagneux offre des paysages à couper le souffle, des rivières tumultueuses et des sentiers de randonnée pour tous les niveaux. C'est l'occasion parfaite de respirer l'air pur des montagnes et de se connecter avec la nature kirghize.",
+      "lieu": "Parc National d'Ala Archa",
+      "activites": [
+        "🚗 <strong>Transfert vers Ala Archa</strong>: Un court trajet en voiture vous mènera aux portes de ce magnifique parc national. Préparez votre appareil photo, les paysages sont spectaculaires dès l'entrée.",
+        "🚶‍♀️ <strong>Randonnée le long de la rivière Ala Archa</strong>: Profitez d'une marche facile et pittoresque le long de la rivière, entouré de sommets enneigés et de forêts de conifères. C'est une excellente introduction à la beauté des montagnes Tian Shan.",
+        "🧺 <strong>Pique-nique au cœur de la nature</strong>: Savourez un déjeuner en plein air, bercé par le son de la rivière et la majesté des montagnes. Une expérience simple mais mémorable."
+      ],
+      "illustration": "jour3.jpg",
+      "encarts": [
+        {
+          "symbole": "🥾",
+          "titre": "Équipement",
+          "texte": "Prévoyez de bonnes chaussures de marche et des couches de vêtements, car la météo en montagne peut changer rapidement."
+        },
+        {
+          "symbole": "💧",
+          "titre": "Hydratation",
+          "texte": "Emportez suffisamment d'eau, surtout si vous prévoyez de monter un peu en altitude. L'air sec peut déshydrater rapidement."
+        }
+      ]
+    },
+    {
+      "jour": 4,
+      "symbole": "🛣️",
+      "titre": "Route vers le Lac Issyk-Koul, la Perle du Kirghizistan",
+      "legende": "Aujourd'hui, nous prenons la route vers l'est, en direction du légendaire lac Issyk-Koul, le deuxième plus grand lac de montagne au monde. Le trajet offre des vues panoramiques sur les steppes et les contreforts des montagnes. Nous nous arrêterons en chemin pour découvrir des sites historiques avant d'atteindre les rives de ce lac salé, jamais gelé.",
+      "lieu": "Cholpon-Ata, Lac Issyk-Koul",
+      "activites": [
+        "🚗 <strong>Trajet vers Cholpon-Ata</strong>: Un voyage pittoresque de plusieurs heures vous mènera le long de paysages variés, des plaines aux montagnes. Profitez des vues et des arrêts photo.",
+        "🗿 <strong>Visite de la Tour Burana</strong>: Explorez les vestiges de cette ancienne tour minaret du XIe siècle, témoin de la grandeur de l'ancienne ville de Balasagun. Le site inclut un musée et des balbals (pierres tombales turques).",
+        "🌅 <strong>Installation à Cholpon-Ata et coucher de soleil sur le lac</strong>: Arrivée à votre hôtel au bord du lac. Profitez de la fin de journée pour admirer le coucher de soleil sur les eaux scintillantes d'Issyk-Koul, un spectacle apaisant."
+      ],
+      "illustration": "jour4.jpg",
+      "encarts": [
+        {
+          "symbole": "⏳",
+          "titre": "Durée du trajet",
+          "texte": "Le trajet de Bichkek à Cholpon-Ata dure environ 3-4 heures, sans compter les arrêts. Prévoyez des snacks et de l'eau."
+        },
+        {
+          "symbole": "📸",
+          "titre": "Photographie",
+          "texte": "La Tour Burana est un excellent sujet photographique, surtout avec les montagnes en arrière-plan. N'oubliez pas votre appareil."
+        }
+      ]
+    },
+    {
+      "jour": 5,
+      "symbole": "🖼️",
+      "titre": "Art Rupestre et Culture au bord d'Issyk-Koul",
+      "legende": "La journée est dédiée à l'exploration des trésors culturels et naturels autour de Cholpon-Ata. Des pétroglyphes millénaires aux centres culturels modernes, vous découvrirez la richesse de l'histoire et des traditions kirghizes. Le lac Issyk-Koul offre un cadre magnifique pour ces découvertes.",
+      "lieu": "Cholpon-Ata, Lac Issyk-Koul",
+      "activites": [
+        "🗿 <strong>Site de pétroglyphes de Cholpon-Ata</strong>: Explorez ce musée à ciel ouvert, où des milliers de gravures rupestres datant de l'âge du bronze à l'époque médiévale racontent des histoires d'anciens peuples et de leur faune.",
+        "🕌 <strong>Complexe culturel Rukh Ordo</strong>: Visitez ce centre unique dédié à la spiritualité et à la culture, représentant les cinq principales religions du monde ainsi que la philosophie nomade. C'est un lieu de paix et de réflexion.",
+        "🏖️ <strong>Détente au bord du lac Issyk-Koul</strong>: Profitez de l'après-midi pour vous détendre sur les plages de sable fin ou même vous baigner dans les eaux claires du lac. L'eau est agréablement fraîche en été."
+      ],
+      "illustration": "jour5.jpg",
+      "encarts": [
+        {
+          "symbole": "☀️",
+          "titre": "Protection solaire",
+          "texte": "Le soleil peut être intense au bord du lac. N'oubliez pas crème solaire, chapeau et lunettes de soleil."
+        },
+        {
+          "symbole": "🚶‍♂️",
+          "titre": "Accès aux pétroglyphes",
+          "texte": "Le site des pétroglyphes est vaste et nécessite un peu de marche. Prévoyez des chaussures confortables."
+        }
+      ]
+    },
+    {
+      "jour": 6,
+      "symbole": "⛰️",
+      "titre": "Vers Karakol, Porte des Tian Shan",
+      "legende": "Nous continuons notre périple vers l'est, en longeant la rive sud du lac Issyk-Koul, réputée pour ses paysages plus sauvages et ses formations rocheuses uniques. Karakol, ville historique et point de départ de nombreuses expéditions en montagne, nous attend avec son charme particulier et son mélange d'influences russes et dounganes.",
+      "lieu": "Karakol",
+      "activites": [
+        "🚗 <strong>Trajet panoramique vers Karakol</strong>: Profitez des vues spectaculaires le long de la rive sud du lac, avec des arrêts photo prévus pour immortaliser les paysages.",
+        "🏜️ <strong>Exploration du Canyon de Skazka (Fairy Tale Canyon)</strong>: Laissez-vous émerveiller par les formations rocheuses colorées et érodées par le vent, qui rappellent des châteaux, des animaux et des paysages lunaires. C'est un lieu magique pour la photographie.",
+        "🕌 <strong>Visite de la Mosquée Doungane de Karakol</strong>: Découvrez cette mosquée unique construite sans clous par des artisans chinois dounganes, ressemblant à un temple bouddhiste. Son architecture est un témoignage fascinant de l'histoire locale."
+      ],
+      "illustration": "jour6.jpg",
+      "encarts": [
+        {
+          "symbole": "🗺️",
+          "titre": "Itinéraire",
+          "texte": "La route sud d'Issyk-Koul est moins développée mais offre des paysages plus authentiques et moins touristiques que la rive nord."
+        },
+        {
+          "symbole": "👟",
+          "titre": "Canyon",
+          "texte": "Le sol du Canyon de Skazka peut être glissant par endroits. Portez des chaussures avec une bonne adhérence."
+        }
+      ]
+    },
+    {
+      "jour": 7,
+      "symbole": "🌲",
+      "titre": "Vallée de Jeti-Oguz et Traditions Nomades",
+      "legende": "Aujourd'hui, nous nous aventurons dans la magnifique vallée de Jeti-Oguz, célèbre pour ses formations rocheuses rouges emblématiques et ses paysages alpins. C'est une immersion profonde dans la nature kirghize et l'occasion de découvrir les traditions nomades qui perdurent dans ces montagnes. Préparez-vous à des vues imprenables et à une atmosphère paisible.",
+      "lieu": "Jeti-Oguz",
+      "activites": [
+        "⛰️ <strong>Découverte des rochers de Jeti-Oguz (Sept Taureaux)</strong>: Admirez ces impressionnantes formations rocheuses rouges qui donnent son nom à la vallée. La légende raconte qu'elles représentent sept taureaux.",
+        "❤️ <strong>Le Rocher du Cœur Brisé</strong>: Un autre site emblématique de Jeti-Oguz, parfait pour une photo mémorable. La légende locale en fait un lieu romantique et mystérieux.",
+        "🐎 <strong>Rencontre avec des éleveurs de chevaux locaux</strong>: Observez la vie des nomades et, si l'occasion se présente, participez à une démonstration de chasse à l'aigle ou de jeux équestres traditionnels. Une expérience culturelle authentique."
+      ],
+      "illustration": "jour7.jpg",
+      "encarts": [
+        {
+          "symbole": "📸",
+          "titre": "Meilleur moment",
+          "texte": "Les rochers rouges de Jeti-Oguz sont particulièrement photogéniques au lever ou au coucher du soleil, lorsque les couleurs sont les plus intenses."
+        },
+        {
+          "symbole": "🥛",
+          "titre": "Boisson locale",
+          "texte": "Si vous êtes aventureux, goûtez au \"Koumys\" (lait de jument fermenté), une boisson traditionnelle très appréciée des nomades."
+        }
+      ]
+    },
+    {
+      "jour": 8,
+      "symbole": "🏞️",
+      "titre": "Randonnée et Sérénité à Jyrgalan",
+      "legende": "Direction la vallée de Jyrgalan, un joyau caché et moins fréquenté, offrant des paysages alpins spectaculaires et des opportunités de randonnée exceptionnelles. Ce village est en train de devenir une destination d'écotourisme, préservant son authenticité et sa beauté naturelle. C'est l'endroit idéal pour se déconnecter et profiter de la tranquillité des montagnes.",
+      "lieu": "Jyrgalan",
+      "activites": [
+        "🚗 <strong>Transfert vers la vallée de Jyrgalan</strong>: Un trajet pittoresque vous mènera à ce village reculé, offrant des vues imprenables sur les montagnes et les pâturages verdoyants.",
+        "🚶‍♀️ <strong>Randonnée vers le lac Turnaly-Kol</strong>: Profitez d'une randonnée modérée à travers des prairies fleuries et des forêts. Le lac Turnaly-Kol est un endroit paisible, parfait pour un pique-nique et l'observation de la faune.",
+        "🏡 <strong>Dîner et nuit en guesthouse locale</strong>: Imprégnez-vous de l'hospitalité kirghize en passant la nuit dans une guesthouse confortable. C'est une excellente occasion de goûter à la cuisine maison et d'échanger avec les habitants."
+      ],
+      "illustration": "jour8.jpg",
+      "encarts": [
+        {
+          "symbole": "📶",
+          "titre": "Connectivité",
+          "texte": "La couverture réseau peut être limitée à Jyrgalan, ce qui en fait un endroit idéal pour une véritable \"détox numérique\"."
+        },
+        {
+          "symbole": "💰",
+          "titre": "Soutien local",
+          "texte": "En séjournant et en participant à des activités à Jyrgalan, vous soutenez directement l'économie locale et le développement du tourisme durable."
+        }
+      ]
+    },
+    {
+      "jour": 9,
+      "symbole": "🐴",
+      "titre": "Aventure Équestre et Retour vers Kochkor",
+      "legende": "Après une matinée d'activités à Jyrgalan, nous reprenons la route vers l'ouest, en direction de Kochkor, un village réputé pour son artisanat du feutre. Le trajet nous fera traverser des paysages variés, offrant un aperçu continu de la beauté naturelle du Kirghizistan. C'est une journée de transition entre les hautes montagnes et les vallées plus habitées.",
+      "lieu": "Kochkor",
+      "activites": [
+        "🐎 <strong>Balade à cheval dans la vallée de Jyrgalan</strong>: Pour ceux qui le souhaitent, une balade à cheval est une manière authentique d'explorer les paysages. Les chevaux kirghizes sont réputés pour leur endurance et leur agilité.",
+        "🚗 <strong>Trajet vers Kochkor</strong>: Un long mais magnifique trajet vous attend, traversant des cols de montagne et des steppes verdoyantes. Préparez-vous à des vues changeantes et à des arrêts photo improvisés.",
+        "🛍️ <strong>Découverte de l'artisanat du feutre à Kochkor</strong>: À votre arrivée, explorez les ateliers locaux où les femmes fabriquent des tapis (shyrdaks) et d'autres objets en feutre selon des techniques ancestrales. C'est une tradition vivante et colorée."
+      ],
+      "illustration": "jour9.jpg",
+      "encarts": [
+        {
+          "symbole": "🛣️",
+          "titre": "Route",
+          "texte": "Le trajet de Jyrgalan à Kochkor est long (environ 6-7 heures). Prévoyez des pauses régulières et des provisions."
+        },
+        {
+          "symbole": "🎁",
+          "titre": "Souvenirs",
+          "texte": "Les shyrdaks de Kochkor sont des souvenirs magnifiques et authentiques. Vous pouvez même assister à leur fabrication."
+        }
+      ]
+    },
+    {
+      "jour": 10,
+      "symbole": "🏕️",
+      "titre": "Immersion Nomade au Lac Song-Koul",
+      "legende": "Aujourd'hui est une journée emblématique de votre voyage : direction le légendaire lac Song-Koul, un lac alpin situé à plus de 3000 mètres d'altitude, entouré de pâturages où les nomades installent leurs yourtes en été. C'est une expérience unique d'immersion dans la culture nomade kirghize, loin de toute modernité. Préparez-vous à une nuit sous les étoiles dans une yourte traditionnelle.",
+      "lieu": "Lac Song-Koul",
+      "activites": [
+        "🚗 <strong>Montée vers le lac Song-Koul</strong>: Le chemin vers Song-Koul est une aventure en soi, avec des paysages de haute montagne à couper le souffle. La route est parfois rudimentaire, mais les vues en valent la peine.",
+        "🏕️ <strong>Installation dans un camp de yourtes</strong>: Découvrez votre hébergement pour la nuit, une yourte traditionnelle. C'est une expérience authentique, offrant un confort simple mais chaleureux.",
+        "🚶‍♂️ <strong>Balade autour du lac et observation de la vie nomade</strong>: Profitez de l'après-midi pour vous promener le long des rives du lac, observer les troupeaux de chevaux et de moutons, et interagir avec les familles nomades (avec respect et si l'occasion se présente)."
+      ],
+      "illustration": "jour10.jpg",
+      "encarts": [
+        {
+          "symbole": "🌡️",
+          "titre": "Températures",
+          "texte": "Les nuits à Song-Koul peuvent être très froides, même en été. Prévoyez des vêtements chauds et un sac de couchage si vous êtes frileux."
+        },
+        {
+          "symbole": "🚽",
+          "titre": "Commodités",
+          "texte": "Les camps de yourtes offrent des toilettes sèches et des douches rudimentaires. C'est une expérience rustique mais enrichissante."
+        }
+      ]
+    },
+    {
+      "jour": 11,
+      "symbole": "🐎",
+      "titre": "Vie Nomade et Équitation à Song-Koul",
+      "legende": "Passez une journée complète à Song-Koul, vous immergeant davantage dans le mode de vie nomade. Que ce soit à cheval ou à pied, explorez les vastes étendues de pâturages, rencontrez les bergers et découvrez leurs traditions ancestrales. C'est une occasion unique de se déconnecter du monde moderne et de vivre au rythme de la nature.",
+      "lieu": "Lac Song-Koul",
+      "activites": [
+        "🐎 <strong>Randonnée à cheval autour du lac</strong>: Une balade à cheval est l'activité phare à Song-Koul. Accompagné d'un guide local, explorez les rives et les collines environnantes, une expérience inoubliable.",
+        "🥛 <strong>Démonstration de fabrication de Koumys ou de fromage</strong>: Si possible, assistez à la préparation du koumys (lait de jument fermenté) ou du fromage local par les familles nomades. Une immersion culturelle fascinante.",
+        "🌌 <strong>Observation des étoiles</strong>: Loin de toute pollution lumineuse, le ciel de Song-Koul est d'une clarté exceptionnelle. Profitez d'une soirée pour admirer la Voie Lactée et les constellations."
+      ],
+      "illustration": "jour11.jpg",
+      "encarts": [
+        {
+          "symbole": "🗣️",
+          "titre": "Communication",
+          "texte": "Quelques mots de russe ou de kirghize (bonjour, merci) seront très appréciés par les locaux. Un guide peut faciliter les échanges."
+        },
+        {
+          "symbole": "🔋",
+          "titre": "Électricité",
+          "texte": "L'électricité est limitée dans les camps de yourtes (souvent via panneaux solaires). Prévoyez une batterie externe pour vos appareils."
+        }
+      ]
+    },
+    {
+      "jour": 12,
+      "symbole": "🏰",
+      "titre": "Caravansérail de Tach Rabat et Route de la Soie",
+      "legende": "Nous quittons les hauts pâturages de Song-Koul pour nous diriger vers le sud, en direction du caravansérail de Tach Rabat, un monument historique majeur de la Route de la Soie. Ce site fascinant, niché dans une vallée isolée, témoigne des échanges commerciaux et culturels qui ont traversé l'Asie Centrale pendant des siècles. C'est un voyage dans le temps au cœur des montagnes.",
+      "lieu": "Tach Rabat",
+      "activites": [
+        "🚗 <strong>Trajet vers Tach Rabat</strong>: Un voyage à travers des paysages de plus en plus arides et montagneux vous mènera à ce site historique. La route est une aventure en soi.",
+        "🏰 <strong>Exploration du Caravansérail de Tach Rabat</strong>: Visitez cette ancienne auberge fortifiée du XVe siècle, remarquablement préservée. Imaginez les marchands et leurs caravanes s'y reposant après de longs jours de voyage.",
+        "🚶‍♂️ <strong>Randonnée légère dans la vallée environnante</strong>: Profitez de la tranquillité de la vallée pour une courte marche. Les paysages sont grandioses et invitent à la contemplation."
+      ],
+      "illustration": "jour12.jpg",
+      "encarts": [
+        {
+          "symbole": "🗺️",
+          "titre": "Localisation",
+          "texte": "Tach Rabat est situé près de la frontière chinoise, dans une région reculée. L'accès se fait par une piste."
+        },
+        {
+          "symbole": "🐎",
+          "titre": "Activités",
+          "texte": "Des balades à cheval sont souvent proposées autour de Tach Rabat pour explorer les environs. Négociez les prix."
+        }
+      ]
+    },
+    {
+      "jour": 13,
+      "symbole": "🛣️",
+      "titre": "Retour vers Bichkek, à travers les paysages du centre",
+      "legende": "Aujourd'hui marque le début de notre retour vers la capitale, Bichkek. Le trajet sera long mais ponctué de paysages variés, des vallées verdoyantes aux cols de montagne. C'est l'occasion de revoir certains des panoramas qui ont marqué votre voyage et de réfléchir aux expériences vécues. Nous ferons des arrêts stratégiques pour apprécier la beauté du Kirghizistan.",
+      "lieu": "Bichkek",
+      "activites": [
+        "🚗 <strong>Long trajet de Tach Rabat à Bichkek</strong>: Préparez-vous à une journée de route significative. Le paysage change constamment, offrant de nouvelles perspectives sur le pays.",
+        "🏞️ <strong>Arrêts photo le long de la route</strong>: Votre chauffeur fera des pauses pour vous permettre d'admirer les vues, notamment les gorges et les rivières qui serpentent à travers les montagnes.",
+        "🍽️ <strong>Dîner dans un restaurant local à Bichkek</strong>: À votre arrivée, savourez un bon repas dans un restaurant de la capitale, l'occasion de goûter à d'autres spécialités kirghizes ou de retrouver des saveurs plus familières."
+      ],
+      "illustration": "jour13.jpg",
+      "encarts": [
+        {
+          "symbole": "⏱️",
+          "titre": "Durée du trajet",
+          "texte": "Le trajet peut durer entre 8 et 10 heures, selon les conditions de la route et les arrêts. Prévoyez des divertissements."
+        },
+        {
+          "symbole": "🛣️",
+          "titre": "État des routes",
+          "texte": "Certaines portions de route peuvent être cahoteuses. La patience est de mise, mais les paysages compensent largement."
+        }
+      ]
+    },
+    {
+      "jour": 14,
+      "symbole": "🛍️",
+      "titre": "Derniers achats et Détente à Bichkek",
+      "legende": "Profitez de votre dernière journée complète au Kirghizistan pour vous détendre, faire quelques achats de souvenirs et vous imprégner une dernière fois de l'ambiance de Bichkek. C'est le moment idéal pour flâner, revisiter un lieu apprécié ou simplement vous reposer avant votre départ. Une soirée d'adieu clôturera ce magnifique voyage.",
+      "lieu": "Bichkek",
+      "activites": [
+        "🛍️ <strong>Achats de souvenirs au marché de ZUM ou au Tsum</strong>: Trouvez des cadeaux uniques comme des articles en feutre, des bijoux en argent, des épices ou des vêtements traditionnels. Le ZUM est un grand magasin, le Tsum est un centre commercial.",
+        "☕ <strong>Détente dans un café local</strong>: Profitez d'un moment de calme dans l'un des nombreux cafés de Bichkek. Observez la vie locale et savourez une boisson chaude ou froide.",
+        "🎉 <strong>Dîner d'adieu avec spectacle folklorique (optionnel)</strong>: Terminez votre voyage en beauté par un dîner spécial, éventuellement accompagné de musique et de danses traditionnelles kirghizes. Une belle façon de dire au revoir au pays."
+      ],
+      "illustration": "jour14.jpg",
+      "encarts": [
+        {
+          "symbole": "🎁",
+          "titre": "Idées cadeaux",
+          "texte": "Les \"kalpaks\" (chapeaux traditionnels en feutre) sont des souvenirs emblématiques et très appréciés."
+        },
+        {
+          "symbole": "💸",
+          "titre": "Négociation",
+          "texte": "Dans les bazars, la négociation est souvent attendue et fait partie de l'expérience. N'hésitez pas à marchander poliment."
+        }
+      ]
+    },
+    {
+      "jour": 15,
+      "symbole": "🛫",
+      "titre": "Départ de Bichkek",
+      "legende": "C'est le moment de dire au revoir au Kirghizistan, un pays qui vous aura sans doute marqué par ses paysages grandioses, son hospitalité et sa culture nomade. Après un dernier petit-déjeuner, vous serez transféré à l'aéroport pour votre vol retour, la tête remplie de souvenirs inoubliables.",
+      "lieu": "Bichkek",
+      "activites": [
+        "🍳 <strong>Petit-déjeuner à l'hôtel</strong>: Profitez d'un dernier repas kirghize ou international avant votre départ.",
+        "🚗 <strong>Transfert à l'aéroport de Manas (FRU)</strong>: Votre chauffeur vous conduira à l'aéroport pour votre vol international.",
+        "🛫 <strong>Vol retour vers Paris, France</strong>: Enregistrement et embarquement pour votre vol, emportant avec vous les images et les émotions de votre aventure au cœur de l'Asie Centrale."
+      ],
+      "illustration": "jour15.jpg",
+      "encarts": [
+        {
+          "symbole": "⏰",
+          "titre": "Heure de départ",
+          "texte": "Prévoyez suffisamment de temps pour le transfert et les formalités à l'aéroport, surtout si votre vol est tôt le matin."
+        },
+        {
+          "symbole": "🛄",
+          "titre": "Bagages",
+          "texte": "Vérifiez les restrictions de poids et de taille de vos bagages pour votre vol international."
+        }
+      ]
+    }
+  ],
+  "detail_budget": [
+    {
+      "titre": "Budget vol:",
+      "legende": "750€/pers (Vol A/R Paris-Bichkek en classe économique avec escale)",
+      "symbole": "🛬"
+    },
+    {
+      "titre": "Budget transports:",
+      "legende": "500€/pers (Mix de transports privés, taxis partagés et marshrutkas pour 15 jours)",
+      "symbole": "🚆"
+    },
+    {
+      "titre": "Budget repas:",
+      "legende": "525€/pers (Environ 35€/jour pour 15 jours, repas variés et locaux)",
+      "symbole": "🥗"
+    },
+    {
+      "titre": "Budget logement:",
+      "legende": "700€/pers (14 nuits à 50€/nuit en hôtels 3 étoiles, guesthouses et yourtes)",
+      "symbole": "🛏️"
+    },
+    {
+      "titre": "Budget activités:",
+      "legende": "250€/pers (Entrées sites, randonnées, balades à cheval, ateliers)",
+      "symbole": "🎭"
+    }
+  ],
+  "periodes_ideales": [
+    {
+      "titre": "Les périodes idéales pour ce séjour sont les mois de mai à septembre.",
+      "symbole": "☀️"
+    },
+    {
+      "titre": "Juin et septembre offrent des températures agréables et moins de foule. Juillet-août est idéal pour les hautes montagnes.",
+      "symbole": "⛰️"
+    }
+  ],
+  "infos_pratiques": [
+    {
+      "titre": "La population kirghize est majoritairement d'origine turque, avec une forte tradition nomade et une hospitalité légendaire. Le sourire est une langue universelle.",
+      "symbole": "🤝"
+    },
+    {
+      "titre": "Le Kirghizistan est un pays montagneux, surnommé la \"Suisse de l'Asie Centrale\", avec plus de 90% de son territoire au-dessus de 1500m d'altitude. Il est traversé par les majestueuses montagnes du Tian Shan.",
+      "symbole": "🏔️"
+    },
+    {
+      "titre": "Le pays est l'un des rares au monde où la chasse à l'aigle est encore pratiquée de manière traditionnelle par les \"berkutchi\", une pratique ancestrale fascinante.",
+      "symbole": "🦅"
+    },
+    {
+      "titre": "Le \"Koumys\", lait de jument fermenté, est la boisson nationale. Son goût est unique et surprenant, à essayer au moins une fois pour une immersion culturelle complète.",
+      "symbole": "🥛"
+    }
+  ],
+  "liens_utiles": [
+    {
+      "legende": "Informations officielles sur le tourisme au Kirghizistan",
+      "titre": "Discover Kyrgyzstan",
+      "url": "https://discoverkyrgyzstan.org/",
+      "symbole": "📘"
+    },
+    {
+      "legende": "Prévisions météo détaillées pour le Kirghizistan",
+      "titre": "Meteo Kirghizistan",
+      "url": "https://www.accuweather.com/fr/kg/kyrgyzstan-weather",
+      "symbole": "🌤️"
+    },
+    {
+      "legende": "Conseils aux voyageurs du Ministère des Affaires Étrangères (France)",
+      "titre": "France Diplomatie - Kirghizistan",
+      "url": "https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/conseils-par-pays-destination/kirghizistan/",
+      "symbole": "🚨"
+    }
+  ]
+}
