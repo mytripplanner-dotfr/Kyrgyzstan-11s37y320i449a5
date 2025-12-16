@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carte du voyage - Kyrgyzstan</title>
+  <style>
+    body { margin: 0; padding: 0; font-family: Arial, sans-serif; }
+    #map { height: 100vh; width: 100%; }
+    .info-window { max-width: 250px; font-family: Arial, sans-serif; }
+    .info-window img { width: 100%; height: auto; border-radius: 8px; margin-bottom: 10px; }
+    .info-window h3 { margin: 0 0 5px 0; font-size: 16px; color: #333; }
+    .info-window p { margin: 5px 0; font-size: 14px; color: #666; }
+    .info-window a { color: #1a73e8; text-decoration: none; }
+    .info-window a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  
+  <script>
+    function initMap() {
+      const center = { lat: 42.2845174, lng: 76.43977482222222 };
+      const map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 10,
+        center: center
+      });
+      
+      const markers = [{"lat":42.8746212,"lng":74.5697617,"name":"Bichkek","jour":1,"titre":"Arrivée à Bichkek, Porte de l'Asie Centrale","streetViewUrl":"https://maps.googleapis.com/maps/api/streetview?size=600x400&location=42.8746212,74.5697617&key=AIzaSyB5WUNvRC9eOjHRLt92fs4hsp0Auje3aAI","streetViewLinkUrl":"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.8746212,74.5697617","aiImageUrl":"jour1.jpg"},{"lat":42.6448377,"lng":74.4803183,"name":"Parc National d'Ala Archa","jour":3,"titre":"Évasion vers le Parc National d'Ala Archa","streetViewUrl":"https://maps.googleapis.com/maps/api/streetview?size=600x400&location=42.6448377,74.4803183&key=AIzaSyB5WUNvRC9eOjHRLt92fs4hsp0Auje3aAI","streetViewLinkUrl":"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.6448377,74.4803183","aiImageUrl":"jour3.jpg"},{"lat":42.6485381,"lng":77.0827511,"name":"Cholpon-Ata, Lac Issyk-Koul","jour":4,"titre":"Route vers le Lac Issyk-Koul, la Perle du Kirghizistan","streetViewUrl":"https://maps.googleapis.com/maps/api/streetview?size=600x400&location=42.6485381,77.0827511&key=AIzaSyB5WUNvRC9eOjHRLt92fs4hsp0Auje3aAI","streetViewLinkUrl":"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.6485381,77.0827511","aiImageUrl":"jour4.jpg"},{"lat":42.4782102,"lng":78.39559860000001,"name":"Karakol","jour":6,"titre":"Vers Karakol, Porte des Tian Shan","streetViewUrl":"https://maps.googleapis.com/maps/api/streetview?size=600x400&location=42.4782102,78.39559860000001&key=AIzaSyB5WUNvRC9eOjHRLt92fs4hsp0Auje3aAI","streetViewLinkUrl":"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.4782102,78.39559860000001","aiImageUrl":"jour6.jpg"},{"lat":42.4289672,"lng":78.2146777,"name":"Jeti-Oguz","jour":7,"titre":"Vallée de Jeti-Oguz et Traditions Nomades","streetViewUrl":"https://maps.googleapis.com/maps/api/streetview?size=600x400&location=42.4289672,78.2146777&key=AIzaSyB5WUNvRC9eOjHRLt92fs4hsp0Auje3aAI","streetViewLinkUrl":"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.4289672,78.2146777","aiImageUrl":"jour7.jpg"},{"lat":42.6043933,"lng":79.02754519999999,"name":"Jyrgalan","jour":8,"titre":"Randonnée et Sérénité à Jyrgalan","streetViewUrl":"https://maps.googleapis.com/maps/api/streetview?size=600x400&location=42.6043933,79.02754519999999&key=AIzaSyB5WUNvRC9eOjHRLt92fs4hsp0Auje3aAI","streetViewLinkUrl":"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.6043933,79.02754519999999","aiImageUrl":"jour8.jpg"},{"lat":42.2164041,"lng":75.7575356,"name":"Kochkor","jour":9,"titre":"Aventure Équestre et Retour vers Kochkor","streetViewUrl":"https://maps.googleapis.com/maps/api/streetview?size=600x400&location=42.2164041,75.7575356&key=AIzaSyB5WUNvRC9eOjHRLt92fs4hsp0Auje3aAI","streetViewLinkUrl":"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.2164041,75.7575356","aiImageUrl":"jour9.jpg"},{"lat":41.8339152,"lng":75.1311874,"name":"Lac Song-Koul","jour":10,"titre":"Immersion Nomade au Lac Song-Koul","streetViewUrl":"https://maps.googleapis.com/maps/api/streetview?size=600x400&location=41.8339152,75.1311874&key=AIzaSyB5WUNvRC9eOjHRLt92fs4hsp0Auje3aAI","streetViewLinkUrl":"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=41.8339152,75.1311874","aiImageUrl":"jour10.jpg"},{"lat":40.8307696,"lng":75.2985978,"name":"Tach Rabat","jour":12,"titre":"Caravansérail de Tach Rabat et Route de la Soie","streetViewUrl":"https://maps.googleapis.com/maps/api/streetview?size=600x400&location=40.8307696,75.2985978&key=AIzaSyB5WUNvRC9eOjHRLt92fs4hsp0Auje3aAI","streetViewLinkUrl":"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=40.8307696,75.2985978","aiImageUrl":"jour12.jpg"}];
+      
+      markers.forEach((markerData) => {
+        const marker = new google.maps.Marker({
+          position: { lat: markerData.lat, lng: markerData.lng },
+          map: map,
+          title: markerData.name,
+          label: String(markerData.jour)
+        });
+        
+        const contentString = `
+          <div class="info-window">
+            <img src="${markerData.streetViewUrl}" alt="Street View de ${markerData.name}" />
+            <h3>Jour ${markerData.jour}</h3>
+            <p><strong>${markerData.name}</strong></p>
+            <p><a href="${markerData.streetViewLinkUrl}" target="_blank" rel="noopener noreferrer"><strong>${markerData.titre}</strong></a></p>
+          </div>
+        `;
+        
+        const infoWindow = new google.maps.InfoWindow({
+          content: contentString
+        });
+        
+        marker.addListener('click', () => {
+          infoWindow.open(map, marker);
+        });
+      });
+    }
+  </script>
+  
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5WUNvRC9eOjHRLt92fs4hsp0Auje3aAI&callback=initMap">
+  </script>
+</body>
+</html>
