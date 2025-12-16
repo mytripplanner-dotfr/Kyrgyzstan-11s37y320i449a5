@@ -1,0 +1,716 @@
+
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'Appel des Montagnes Célestes : Aventure au Kirghizistan </title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+      tailwind.config = {
+          theme: {
+              extend: {
+                  colors: {
+                      template: {
+                          sable: '#FFEDD5', 
+                          ocre: '#F97316',   // Orange Vibrant (Brand Accent)
+                          roche: '#0F172A',  // Bleu Nuit (Brand Dark)
+                          ciel: '#0D9488',   // Vert Lagon (Brand Primary)
+                          bg: '#FFF7ED'      // C'est un blanc cassé chaud, parfait pour la lecture et le contraste.
+                      }
+                  },
+                  fontFamily: {
+                      sans: ['"Plus Jakarta Sans"', 'sans-serif'], // Nouvelle police corps
+                      serif: ['"Outfit"', 'sans-serif'],           // Nouvelle police titres
+                  }
+              }
+          }
+      }
+    </script>
+    <style>
+        body { overflow-x: hidden; }
+        
+        /* 2. FORÇAGE DES GRAISSES (Comme sur la Landing Page) */
+        .font-sans { font-weight: 600 !important; }
+        .font-serif { font-weight: 800 !important; }
+
+        /* Ligne verticale de la timeline */
+        .timeline-line {
+            position: absolute;
+            left: 24px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #E5E7EB;
+            z-index: 0;
+        }
+
+        @media (min-width: 768px) {
+            .timeline-line { left: 50%; margin-left: -1px; }
+        }
+
+        /* Style des cartes Info */
+        .tip-card {
+            border-left: 4px solid #F97316; /* ocre */
+            background-color: #FFF7ED;
+        }
+
+        /* Masquer la scrollbar de la nav mobile tout en gardant le scroll */
+        .hide-scroll::-webkit-scrollbar { display: none; }
+        .hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-template-bg text-template-roche antialiased">
+    
+    <nav id="nav-desktop" class="hidden md:flex fixed top-0 w-full z-50 bg-white/90 backdrop-blur border-b border-gray-200 py-4 px-8 justify-between items-center shadow-sm transition-transform duration-300 -translate-y-full">
+        <a href="#top" class="text-xl font-serif font-bold tracking-widest text-template-roche">MyTrip<span class="text-template-ocre">Planner</span></a>
+        <div class="space-x-6 text-sm font-bold text-gray-600">
+            <a href="#jour-1" class="nav-item-desktop hover:text-template-ocre transition">Le Parcours</a>
+            <a href="#pratique" class="nav-item-desktop hover:text-template-ocre transition">Infos Pratiques</a>
+        </div>
+    </nav>
+
+    <nav id="nav-mobile" class="md:hidden fixed top-0 w-full z-50 bg-white/95 backdrop-blur border-b border-gray-200 py-3 pl-4 overflow-x-auto hide-scroll whitespace-nowrap shadow-md transition-transform duration-300 -translate-y-full">
+        <div class="flex space-x-2 pr-4" id="mobile-menu-container">
+            <a href="#top" class="inline-block px-3 py-1 bg-template-roche text-white rounded-full text-xs font-bold shadow-sm">Top</a>
+            
+                <a href="#jour-1" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J1 Arrivée à Bichkek, Porte de l'Asie Centrale</a>
+            
+                <a href="#jour-2" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J2 Découverte de Bichkek, entre histoire et modernité</a>
+            
+                <a href="#jour-3" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J3 Évasion vers le Parc National d'Ala Archa</a>
+            
+                <a href="#jour-4" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J4 Route vers le Lac Issyk-Koul, la Perle du Kirghizistan</a>
+            
+                <a href="#jour-5" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J5 Art Rupestre et Culture au bord d'Issyk-Koul</a>
+            
+                <a href="#jour-6" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J6 Vers Karakol, Porte des Tian Shan</a>
+            
+                <a href="#jour-7" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J7 Vallée de Jeti-Oguz et Traditions Nomades</a>
+            
+                <a href="#jour-8" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J8 Randonnée et Sérénité à Jyrgalan</a>
+            
+                <a href="#jour-9" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J9 Aventure Équestre et Retour vers Kochkor</a>
+            
+                <a href="#jour-10" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J10 Immersion Nomade au Lac Song-Koul</a>
+            
+                <a href="#jour-11" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J11 Vie Nomade et Équitation à Song-Koul</a>
+            
+                <a href="#jour-12" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J12 Caravansérail de Tach Rabat et Route de la Soie</a>
+            
+                <a href="#jour-13" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J13 Retour vers Bichkek, à travers les paysages du centre</a>
+            
+                <a href="#jour-14" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J14 Derniers achats et Détente à Bichkek</a>
+            
+                <a href="#jour-15" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J15 Départ de Bichkek</a>
+            
+            <a href="#pratique" class="mobile-link inline-block px-3 py-1 border border-gray-300 text-gray-500 rounded-full text-xs font-bold">Infos</a>
+        </div>
+    </nav>
+
+    <header id="top" class="relative h-[60vh] flex items-center justify-center bg-cover bg-center"
+            style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url('https://raw.githubusercontent.com/mytripplanner-dotfr/Kyrgyzstan-11s37y320i449a5/main/header.png" || 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2021'}');">
+        
+        <div class="relative z-20 text-center text-white px-4 max-w-3xl animate-fade-in-up">
+            <p class="font-sans text-template-sable tracking-[0.2em] mb-4 uppercase text-xs font-bold">Feuille de Route</p>
+            <h1 class="font-serif text-5xl md:text-8xl mb-6 leading-tight drop-shadow-lg">KYRGYZSTAN</h1>
+            <p class="font-sans text-lg md:text-xl text-gray-100 mb-10 font-medium max-w-2xl mx-auto leading-relaxed">L'Appel des Montagnes Célestes : Aventure au Kirghizistan</p>
+            
+            <div class="flex flex-wrap justify-center gap-4 text-sm font-bold mb-10">
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">🗓️ 15 jours</span>
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">💰 3000€</span>
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">🛬 12h avec escale depuis Paris, France</span>
+            </div>
+        </div>
+    </header>
+
+    <section id="itineraire" class="max-w-6xl mx-auto px-4 py-16 relative">
+        <div class="text-center mb-16">
+            <h2 class="text-template-ocre font-bold tracking-normal text-4xl mt-2 uppercase font-serif">Votre Roadtrip</h2>
+        </div>
+
+        <div class="relative">
+            <div class="timeline-line"></div>
+            
+                <div id="jour-1" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 1</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Arrivée à Bichkek, Porte de l'Asie Centrale</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Après un long voyage, la capitale kirghize vous accueille avec son mélange d'architecture soviétique et de touches nomades. Prenez le temps de vous installer et de faire une première immersion douce dans l'ambiance locale. La journée sera légère pour vous permettre de récupérer du décalage horaire et de vous préparer aux aventures à venir.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🛬 <strong>Arrivée à l'aéroport de Manas (FRU)</strong>: Atterrissage à Bichkek, formalités d'entrée et transfert vers votre hôtel. Profitez du trajet pour observer les premiers paysages kirghizes.</li><li>🛏️ <strong>Installation à l'hôtel et repos</strong>: Prenez le temps de vous rafraîchir et de vous détendre après le vol. Votre hôtel 3 étoiles offre tout le confort nécessaire pour une bonne récupération.</li><li>🚶‍♂️ <strong>Balade légère au Parc Panfilov</strong>: Une promenade relaxante dans ce parc verdoyant vous permettra de vous dégourdir les jambes et d'observer la vie locale en toute tranquillité.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Kyrgyzstan-11s37y320i449a5/main/jour1.jpg" class="w-full h-64 object-cover" alt="Jour 1">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">ℹ️ À savoir</p>
+                                <p class="text-gray-700">Le Kirghizistan est un pays montagneux, préparez-vous à des paysages grandioses et à des altitudes variées. L'hospitalité est une valeur fondamentale ici.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💡 Conseil</p>
+                                <p class="text-gray-700">Changez un peu d'argent à l'aéroport pour les premières dépenses, mais les taux sont souvent meilleurs en ville. La monnaie est le Som kirghize (KGS).</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-2" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 2</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Découverte de Bichkek, entre histoire et modernité</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Explorez le cœur de la capitale kirghize, où l'héritage soviétique côtoie la culture nomade. Des places imposantes aux marchés animés, Bichkek offre un aperçu fascinant de l'histoire et de la vie quotidienne du pays. Préparez-vous à une journée riche en découvertes culturelles et architecturales.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🏛️ <strong>Visite de la Place Ala-Too</strong>: Admirez le drapeau géant et le monument de Manas, héros national. C'est le centre névralgique de la ville, souvent le théâtre d'événements importants.</li><li>🛍️ <strong>Exploration du Bazar d'Osh</strong>: Plongez dans l'ambiance vibrante de ce marché traditionnel. Vous y trouverez de tout, des épices aux vêtements, en passant par l'artisanat local, une véritable immersion sensorielle.</li><li>🖼️ <strong>Musée Historique d'État</strong>: Découvrez l'histoire riche du Kirghizistan, de l'Antiquité à l'ère soviétique. Ses collections offrent un aperçu précieux des cultures nomades et des événements marquants du pays.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Kyrgyzstan-11s37y320i449a5/main/jour2.jpg" class="w-full h-64 object-cover" alt="Jour 2">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🚶‍♀️ Transport</p>
+                                <p class="text-gray-700">Bichkek est une ville relativement facile à explorer à pied ou en taxi. Les applications comme Yandex Go sont pratiques et abordables.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🍲 Gastronomie</p>
+                                <p class="text-gray-700">Goûtez au "Beshbarmak", plat national à base de viande et de nouilles, ou au "Lagman", des nouilles étirées à la main avec légumes et viande.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-3" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 3</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Évasion vers le Parc National d'Ala Archa</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Laissez derrière vous l'agitation de la ville pour vous immerger dans la splendeur naturelle du Parc National d'Ala Archa. Situé à une courte distance de Bichkek, ce joyau montagneux offre des paysages à couper le souffle, des rivières tumultueuses et des sentiers de randonnée pour tous les niveaux. C'est l'occasion parfaite de respirer l'air pur des montagnes et de se connecter avec la nature kirghize.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🚗 <strong>Transfert vers Ala Archa</strong>: Un court trajet en voiture vous mènera aux portes de ce magnifique parc national. Préparez votre appareil photo, les paysages sont spectaculaires dès l'entrée.</li><li>🚶‍♀️ <strong>Randonnée le long de la rivière Ala Archa</strong>: Profitez d'une marche facile et pittoresque le long de la rivière, entouré de sommets enneigés et de forêts de conifères. C'est une excellente introduction à la beauté des montagnes Tian Shan.</li><li>🧺 <strong>Pique-nique au cœur de la nature</strong>: Savourez un déjeuner en plein air, bercé par le son de la rivière et la majesté des montagnes. Une expérience simple mais mémorable.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Kyrgyzstan-11s37y320i449a5/main/jour3.jpg" class="w-full h-64 object-cover" alt="Jour 3">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🥾 Équipement</p>
+                                <p class="text-gray-700">Prévoyez de bonnes chaussures de marche et des couches de vêtements, car la météo en montagne peut changer rapidement.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💧 Hydratation</p>
+                                <p class="text-gray-700">Emportez suffisamment d'eau, surtout si vous prévoyez de monter un peu en altitude. L'air sec peut déshydrater rapidement.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-4" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 4</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Route vers le Lac Issyk-Koul, la Perle du Kirghizistan</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Aujourd'hui, nous prenons la route vers l'est, en direction du légendaire lac Issyk-Koul, le deuxième plus grand lac de montagne au monde. Le trajet offre des vues panoramiques sur les steppes et les contreforts des montagnes. Nous nous arrêterons en chemin pour découvrir des sites historiques avant d'atteindre les rives de ce lac salé, jamais gelé.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🚗 <strong>Trajet vers Cholpon-Ata</strong>: Un voyage pittoresque de plusieurs heures vous mènera le long de paysages variés, des plaines aux montagnes. Profitez des vues et des arrêts photo.</li><li>🗿 <strong>Visite de la Tour Burana</strong>: Explorez les vestiges de cette ancienne tour minaret du XIe siècle, témoin de la grandeur de l'ancienne ville de Balasagun. Le site inclut un musée et des balbals (pierres tombales turques).</li><li>🌅 <strong>Installation à Cholpon-Ata et coucher de soleil sur le lac</strong>: Arrivée à votre hôtel au bord du lac. Profitez de la fin de journée pour admirer le coucher de soleil sur les eaux scintillantes d'Issyk-Koul, un spectacle apaisant.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Kyrgyzstan-11s37y320i449a5/main/jour4.jpg" class="w-full h-64 object-cover" alt="Jour 4">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">⏳ Durée du trajet</p>
+                                <p class="text-gray-700">Le trajet de Bichkek à Cholpon-Ata dure environ 3-4 heures, sans compter les arrêts. Prévoyez des snacks et de l'eau.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">📸 Photographie</p>
+                                <p class="text-gray-700">La Tour Burana est un excellent sujet photographique, surtout avec les montagnes en arrière-plan. N'oubliez pas votre appareil.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-5" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 5</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Art Rupestre et Culture au bord d'Issyk-Koul</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">La journée est dédiée à l'exploration des trésors culturels et naturels autour de Cholpon-Ata. Des pétroglyphes millénaires aux centres culturels modernes, vous découvrirez la richesse de l'histoire et des traditions kirghizes. Le lac Issyk-Koul offre un cadre magnifique pour ces découvertes.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🗿 <strong>Site de pétroglyphes de Cholpon-Ata</strong>: Explorez ce musée à ciel ouvert, où des milliers de gravures rupestres datant de l'âge du bronze à l'époque médiévale racontent des histoires d'anciens peuples et de leur faune.</li><li>🕌 <strong>Complexe culturel Rukh Ordo</strong>: Visitez ce centre unique dédié à la spiritualité et à la culture, représentant les cinq principales religions du monde ainsi que la philosophie nomade. C'est un lieu de paix et de réflexion.</li><li>🏖️ <strong>Détente au bord du lac Issyk-Koul</strong>: Profitez de l'après-midi pour vous détendre sur les plages de sable fin ou même vous baigner dans les eaux claires du lac. L'eau est agréablement fraîche en été.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Kyrgyzstan-11s37y320i449a5/main/jour5.jpg" class="w-full h-64 object-cover" alt="Jour 5">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">☀️ Protection solaire</p>
+                                <p class="text-gray-700">Le soleil peut être intense au bord du lac. N'oubliez pas crème solaire, chapeau et lunettes de soleil.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🚶‍♂️ Accès aux pétroglyphes</p>
+                                <p class="text-gray-700">Le site des pétroglyphes est vaste et nécessite un peu de marche. Prévoyez des chaussures confortables.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-6" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 6</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Vers Karakol, Porte des Tian Shan</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Nous continuons notre périple vers l'est, en longeant la rive sud du lac Issyk-Koul, réputée pour ses paysages plus sauvages et ses formations rocheuses uniques. Karakol, ville historique et point de départ de nombreuses expéditions en montagne, nous attend avec son charme particulier et son mélange d'influences russes et dounganes.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🚗 <strong>Trajet panoramique vers Karakol</strong>: Profitez des vues spectaculaires le long de la rive sud du lac, avec des arrêts photo prévus pour immortaliser les paysages.</li><li>🏜️ <strong>Exploration du Canyon de Skazka (Fairy Tale Canyon)</strong>: Laissez-vous émerveiller par les formations rocheuses colorées et érodées par le vent, qui rappellent des châteaux, des animaux et des paysages lunaires. C'est un lieu magique pour la photographie.</li><li>🕌 <strong>Visite de la Mosquée Doungane de Karakol</strong>: Découvrez cette mosquée unique construite sans clous par des artisans chinois dounganes, ressemblant à un temple bouddhiste. Son architecture est un témoignage fascinant de l'histoire locale.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Kyrgyzstan-11s37y320i449a5/main/jour6.jpg" class="w-full h-64 object-cover" alt="Jour 6">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🗺️ Itinéraire</p>
+                                <p class="text-gray-700">La route sud d'Issyk-Koul est moins développée mais offre des paysages plus authentiques et moins touristiques que la rive nord.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">👟 Canyon</p>
+                                <p class="text-gray-700">Le sol du Canyon de Skazka peut être glissant par endroits. Portez des chaussures avec une bonne adhérence.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-7" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 7</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Vallée de Jeti-Oguz et Traditions Nomades</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Aujourd'hui, nous nous aventurons dans la magnifique vallée de Jeti-Oguz, célèbre pour ses formations rocheuses rouges emblématiques et ses paysages alpins. C'est une immersion profonde dans la nature kirghize et l'occasion de découvrir les traditions nomades qui perdurent dans ces montagnes. Préparez-vous à des vues imprenables et à une atmosphère paisible.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>⛰️ <strong>Découverte des rochers de Jeti-Oguz (Sept Taureaux)</strong>: Admirez ces impressionnantes formations rocheuses rouges qui donnent son nom à la vallée. La légende raconte qu'elles représentent sept taureaux.</li><li>❤️ <strong>Le Rocher du Cœur Brisé</strong>: Un autre site emblématique de Jeti-Oguz, parfait pour une photo mémorable. La légende locale en fait un lieu romantique et mystérieux.</li><li>🐎 <strong>Rencontre avec des éleveurs de chevaux locaux</strong>: Observez la vie des nomades et, si l'occasion se présente, participez à une démonstration de chasse à l'aigle ou de jeux équestres traditionnels. Une expérience culturelle authentique.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Kyrgyzstan-11s37y320i449a5/main/jour7.jpg" class="w-full h-64 object-cover" alt="Jour 7">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">📸 Meilleur moment</p>
+                                <p class="text-gray-700">Les rochers rouges de Jeti-Oguz sont particulièrement photogéniques au lever ou au coucher du soleil, lorsque les couleurs sont les plus intenses.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🥛 Boisson locale</p>
+                                <p class="text-gray-700">Si vous êtes aventureux, goûtez au "Koumys" (lait de jument fermenté), une boisson traditionnelle très appréciée des nomades.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-8" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 8</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Randonnée et Sérénité à Jyrgalan</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Direction la vallée de Jyrgalan, un joyau caché et moins fréquenté, offrant des paysages alpins spectaculaires et des opportunités de randonnée exceptionnelles. Ce village est en train de devenir une destination d'écotourisme, préservant son authenticité et sa beauté naturelle. C'est l'endroit idéal pour se déconnecter et profiter de la tranquillité des montagnes.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🚗 <strong>Transfert vers la vallée de Jyrgalan</strong>: Un trajet pittoresque vous mènera à ce village reculé, offrant des vues imprenables sur les montagnes et les pâturages verdoyants.</li><li>🚶‍♀️ <strong>Randonnée vers le lac Turnaly-Kol</strong>: Profitez d'une randonnée modérée à travers des prairies fleuries et des forêts. Le lac Turnaly-Kol est un endroit paisible, parfait pour un pique-nique et l'observation de la faune.</li><li>🏡 <strong>Dîner et nuit en guesthouse locale</strong>: Imprégnez-vous de l'hospitalité kirghize en passant la nuit dans une guesthouse confortable. C'est une excellente occasion de goûter à la cuisine maison et d'échanger avec les habitants.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Kyrgyzstan-11s37y320i449a5/main/jour8.jpg" class="w-full h-64 object-cover" alt="Jour 8">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">📶 Connectivité</p>
+                                <p class="text-gray-700">La couverture réseau peut être limitée à Jyrgalan, ce qui en fait un endroit idéal pour une véritable "détox numérique".</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💰 Soutien local</p>
+                                <p class="text-gray-700">En séjournant et en participant à des activités à Jyrgalan, vous soutenez directement l'économie locale et le développement du tourisme durable.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-9" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 9</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Aventure Équestre et Retour vers Kochkor</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Après une matinée d'activités à Jyrgalan, nous reprenons la route vers l'ouest, en direction de Kochkor, un village réputé pour son artisanat du feutre. Le trajet nous fera traverser des paysages variés, offrant un aperçu continu de la beauté naturelle du Kirghizistan. C'est une journée de transition entre les hautes montagnes et les vallées plus habitées.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🐎 <strong>Balade à cheval dans la vallée de Jyrgalan</strong>: Pour ceux qui le souhaitent, une balade à cheval est une manière authentique d'explorer les paysages. Les chevaux kirghizes sont réputés pour leur endurance et leur agilité.</li><li>🚗 <strong>Trajet vers Kochkor</strong>: Un long mais magnifique trajet vous attend, traversant des cols de montagne et des steppes verdoyantes. Préparez-vous à des vues changeantes et à des arrêts photo improvisés.</li><li>🛍️ <strong>Découverte de l'artisanat du feutre à Kochkor</strong>: À votre arrivée, explorez les ateliers locaux où les femmes fabriquent des tapis (shyrdaks) et d'autres objets en feutre selon des techniques ancestrales. C'est une tradition vivante et colorée.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Kyrgyzstan-11s37y320i449a5/main/jour9.jpg" class="w-full h-64 object-cover" alt="Jour 9">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🛣️ Route</p>
+                                <p class="text-gray-700">Le trajet de Jyrgalan à Kochkor est long (environ 6-7 heures). Prévoyez des pauses régulières et des provisions.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🎁 Souvenirs</p>
+                                <p class="text-gray-700">Les shyrdaks de Kochkor sont des souvenirs magnifiques et authentiques. Vous pouvez même assister à leur fabrication.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-10" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 10</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Immersion Nomade au Lac Song-Koul</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Aujourd'hui est une journée emblématique de votre voyage : direction le légendaire lac Song-Koul, un lac alpin situé à plus de 3000 mètres d'altitude, entouré de pâturages où les nomades installent leurs yourtes en été. C'est une expérience unique d'immersion dans la culture nomade kirghize, loin de toute modernité. Préparez-vous à une nuit sous les étoiles dans une yourte traditionnelle.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🚗 <strong>Montée vers le lac Song-Koul</strong>: Le chemin vers Song-Koul est une aventure en soi, avec des paysages de haute montagne à couper le souffle. La route est parfois rudimentaire, mais les vues en valent la peine.</li><li>🏕️ <strong>Installation dans un camp de yourtes</strong>: Découvrez votre hébergement pour la nuit, une yourte traditionnelle. C'est une expérience authentique, offrant un confort simple mais chaleureux.</li><li>🚶‍♂️ <strong>Balade autour du lac et observation de la vie nomade</strong>: Profitez de l'après-midi pour vous promener le long des rives du lac, observer les troupeaux de chevaux et de moutons, et interagir avec les familles nomades (avec respect et si l'occasion se présente).</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Kyrgyzstan-11s37y320i449a5/main/jour10.jpg" class="w-full h-64 object-cover" alt="Jour 10">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🌡️ Températures</p>
+                                <p class="text-gray-700">Les nuits à Song-Koul peuvent être très froides, même en été. Prévoyez des vêtements chauds et un sac de couchage si vous êtes frileux.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🚽 Commodités</p>
+                                <p class="text-gray-700">Les camps de yourtes offrent des toilettes sèches et des douches rudimentaires. C'est une expérience rustique mais enrichissante.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-11" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 11</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Vie Nomade et Équitation à Song-Koul</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Passez une journée complète à Song-Koul, vous immergeant davantage dans le mode de vie nomade. Que ce soit à cheval ou à pied, explorez les vastes étendues de pâturages, rencontrez les bergers et découvrez leurs traditions ancestrales. C'est une occasion unique de se déconnecter du monde moderne et de vivre au rythme de la nature.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🐎 <strong>Randonnée à cheval autour du lac</strong>: Une balade à cheval est l'activité phare à Song-Koul. Accompagné d'un guide local, explorez les rives et les collines environnantes, une expérience inoubliable.</li><li>🥛 <strong>Démonstration de fabrication de Koumys ou de fromage</strong>: Si possible, assistez à la préparation du koumys (lait de jument fermenté) ou du fromage local par les familles nomades. Une immersion culturelle fascinante.</li><li>🌌 <strong>Observation des étoiles</strong>: Loin de toute pollution lumineuse, le ciel de Song-Koul est d'une clarté exceptionnelle. Profitez d'une soirée pour admirer la Voie Lactée et les constellations.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Kyrgyzstan-11s37y320i449a5/main/jour11.jpg" class="w-full h-64 object-cover" alt="Jour 11">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🗣️ Communication</p>
+                                <p class="text-gray-700">Quelques mots de russe ou de kirghize (bonjour, merci) seront très appréciés par les locaux. Un guide peut faciliter les échanges.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🔋 Électricité</p>
+                                <p class="text-gray-700">L'électricité est limitée dans les camps de yourtes (souvent via panneaux solaires). Prévoyez une batterie externe pour vos appareils.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-12" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 12</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Caravansérail de Tach Rabat et Route de la Soie</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Nous quittons les hauts pâturages de Song-Koul pour nous diriger vers le sud, en direction du caravansérail de Tach Rabat, un monument historique majeur de la Route de la Soie. Ce site fascinant, niché dans une vallée isolée, témoigne des échanges commerciaux et culturels qui ont traversé l'Asie Centrale pendant des siècles. C'est un voyage dans le temps au cœur des montagnes.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🚗 <strong>Trajet vers Tach Rabat</strong>: Un voyage à travers des paysages de plus en plus arides et montagneux vous mènera à ce site historique. La route est une aventure en soi.</li><li>🏰 <strong>Exploration du Caravansérail de Tach Rabat</strong>: Visitez cette ancienne auberge fortifiée du XVe siècle, remarquablement préservée. Imaginez les marchands et leurs caravanes s'y reposant après de longs jours de voyage.</li><li>🚶‍♂️ <strong>Randonnée légère dans la vallée environnante</strong>: Profitez de la tranquillité de la vallée pour une courte marche. Les paysages sont grandioses et invitent à la contemplation.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Kyrgyzstan-11s37y320i449a5/main/jour12.jpg" class="w-full h-64 object-cover" alt="Jour 12">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🗺️ Localisation</p>
+                                <p class="text-gray-700">Tach Rabat est situé près de la frontière chinoise, dans une région reculée. L'accès se fait par une piste.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🐎 Activités</p>
+                                <p class="text-gray-700">Des balades à cheval sont souvent proposées autour de Tach Rabat pour explorer les environs. Négociez les prix.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-13" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 13</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Retour vers Bichkek, à travers les paysages du centre</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Aujourd'hui marque le début de notre retour vers la capitale, Bichkek. Le trajet sera long mais ponctué de paysages variés, des vallées verdoyantes aux cols de montagne. C'est l'occasion de revoir certains des panoramas qui ont marqué votre voyage et de réfléchir aux expériences vécues. Nous ferons des arrêts stratégiques pour apprécier la beauté du Kirghizistan.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🚗 <strong>Long trajet de Tach Rabat à Bichkek</strong>: Préparez-vous à une journée de route significative. Le paysage change constamment, offrant de nouvelles perspectives sur le pays.</li><li>🏞️ <strong>Arrêts photo le long de la route</strong>: Votre chauffeur fera des pauses pour vous permettre d'admirer les vues, notamment les gorges et les rivières qui serpentent à travers les montagnes.</li><li>🍽️ <strong>Dîner dans un restaurant local à Bichkek</strong>: À votre arrivée, savourez un bon repas dans un restaurant de la capitale, l'occasion de goûter à d'autres spécialités kirghizes ou de retrouver des saveurs plus familières.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Kyrgyzstan-11s37y320i449a5/main/jour13.jpg" class="w-full h-64 object-cover" alt="Jour 13">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">⏱️ Durée du trajet</p>
+                                <p class="text-gray-700">Le trajet peut durer entre 8 et 10 heures, selon les conditions de la route et les arrêts. Prévoyez des divertissements.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🛣️ État des routes</p>
+                                <p class="text-gray-700">Certaines portions de route peuvent être cahoteuses. La patience est de mise, mais les paysages compensent largement.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-14" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 14</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Derniers achats et Détente à Bichkek</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Profitez de votre dernière journée complète au Kirghizistan pour vous détendre, faire quelques achats de souvenirs et vous imprégner une dernière fois de l'ambiance de Bichkek. C'est le moment idéal pour flâner, revisiter un lieu apprécié ou simplement vous reposer avant votre départ. Une soirée d'adieu clôturera ce magnifique voyage.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🛍️ <strong>Achats de souvenirs au marché de ZUM ou au Tsum</strong>: Trouvez des cadeaux uniques comme des articles en feutre, des bijoux en argent, des épices ou des vêtements traditionnels. Le ZUM est un grand magasin, le Tsum est un centre commercial.</li><li>☕ <strong>Détente dans un café local</strong>: Profitez d'un moment de calme dans l'un des nombreux cafés de Bichkek. Observez la vie locale et savourez une boisson chaude ou froide.</li><li>🎉 <strong>Dîner d'adieu avec spectacle folklorique (optionnel)</strong>: Terminez votre voyage en beauté par un dîner spécial, éventuellement accompagné de musique et de danses traditionnelles kirghizes. Une belle façon de dire au revoir au pays.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Kyrgyzstan-11s37y320i449a5/main/jour14.jpg" class="w-full h-64 object-cover" alt="Jour 14">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🎁 Idées cadeaux</p>
+                                <p class="text-gray-700">Les "kalpaks" (chapeaux traditionnels en feutre) sont des souvenirs emblématiques et très appréciés.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💸 Négociation</p>
+                                <p class="text-gray-700">Dans les bazars, la négociation est souvent attendue et fait partie de l'expérience. N'hésitez pas à marchander poliment.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-15" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 15</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Départ de Bichkek</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">C'est le moment de dire au revoir au Kirghizistan, un pays qui vous aura sans doute marqué par ses paysages grandioses, son hospitalité et sa culture nomade. Après un dernier petit-déjeuner, vous serez transféré à l'aéroport pour votre vol retour, la tête remplie de souvenirs inoubliables.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🍳 <strong>Petit-déjeuner à l'hôtel</strong>: Profitez d'un dernier repas kirghize ou international avant votre départ.</li><li>🚗 <strong>Transfert à l'aéroport de Manas (FRU)</strong>: Votre chauffeur vous conduira à l'aéroport pour votre vol international.</li><li>🛫 <strong>Vol retour vers Paris, France</strong>: Enregistrement et embarquement pour votre vol, emportant avec vous les images et les émotions de votre aventure au cœur de l'Asie Centrale.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Kyrgyzstan-11s37y320i449a5/main/jour15.jpg" class="w-full h-64 object-cover" alt="Jour 15">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">⏰ Heure de départ</p>
+                                <p class="text-gray-700">Prévoyez suffisamment de temps pour le transfert et les formalités à l'aéroport, surtout si votre vol est tôt le matin.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🛄 Bagages</p>
+                                <p class="text-gray-700">Vérifiez les restrictions de poids et de taille de vos bagages pour votre vol international.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+        </div>
+    </section>
+
+    <section id="pratique" class="bg-white border-t border-gray-200 pt-12 pb-12 scroll-mt-24">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-10">
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>💴</span> Budget
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget vol: </strong>750€/pers (Vol A/R Paris-Bichkek en classe économique avec escale)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget transports: </strong>500€/pers (Mix de transports privés, taxis partagés et marshrutkas pour 15 jours)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget repas: </strong>525€/pers (Environ 35€/jour pour 15 jours, repas variés et locaux)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget logement: </strong>700€/pers (14 nuits à 50€/nuit en hôtels 3 étoiles, guesthouses et yourtes)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget activités: </strong>250€/pers (Entrées sites, randonnées, balades à cheval, ateliers)</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>☀️</span> Périodes Idéales
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">Les périodes idéales pour ce séjour sont les mois de mai à septembre.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">Juin et septembre offrent des températures agréables et moins de foule. Juillet-août est idéal pour les hautes montagnes.</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>📃</span> Infos pratiques
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">🤝 La population kirghize est majoritairement d'origine turque, avec une forte tradition nomade et une hospitalité légendaire. Le sourire est une langue universelle.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">🏔️ Le Kirghizistan est un pays montagneux, surnommé la "Suisse de l'Asie Centrale", avec plus de 90% de son territoire au-dessus de 1500m d'altitude. Il est traversé par les majestueuses montagnes du Tian Shan.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">🦅 Le pays est l'un des rares au monde où la chasse à l'aigle est encore pratiquée de manière traditionnelle par les "berkutchi", une pratique ancestrale fascinante.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">🥛 Le "Koumys", lait de jument fermenté, est la boisson nationale. Son goût est unique et surprenant, à essayer au moins une fois pour une immersion culturelle complète.</p>
+                
+            </div>            
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>🔗</span> Liens Utiles
+                </h4>
+                <ul class="text-sm space-y-3">
+                  <li><a href="https://mytripplanner-dotfr.github.io/Kyrgyzstan-11s37y320i449a5/map.html" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🗺️ Carte Interactive</strong></a></li>
+                    
+                        <li><a href="https://discoverkyrgyzstan.org/" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>📘 Discover Kyrgyzstan</strong></a></li>
+                    
+                        <li><a href="https://www.accuweather.com/fr/kg/kyrgyzstan-weather" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🌤️ Meteo Kirghizistan</strong></a></li>
+                    
+                        <li><a href="https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/conseils-par-pays-destination/kirghizistan/" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🚨 France Diplomatie - Kirghizistan</strong></a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-50 border-t border-slate-200 py-6">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <p class="font-serif text-lg text-template-roche mb-2 font-bold">
+                MyTrip<span class="text-template-ocre">Planner</span>
+            </p>
+
+                <div class="flex justify-center gap-4 text-[10px] md:text-xs text-slate-500 mb-4 font-semibold">
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">Mentions Légales</a>
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">CGU</a>
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">Confidentialité</a>
+                </div>
+
+            <p class="text-[10px] text-gray-400 mb-2">
+                &copy; 2025 MyTripPlanner. Tous droits réservés.
+            </p>
+
+            <div class="flex justify-center">
+                <p class="text-[10px] text-gray-400 uppercase tracking-widest px-2 py-0.5 border border-gray-200 rounded-full inline-block">
+                    🤖 Contenu généré par IA
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Gestion Scroll & Menu
+        const navDesktop = document.getElementById('nav-desktop');
+        const navMobile = document.getElementById('nav-mobile');
+        
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                navDesktop.classList.remove('-translate-y-full');
+                navMobile.classList.remove('-translate-y-full');
+            } else {
+                navDesktop.classList.add('-translate-y-full');
+                navMobile.classList.add('-translate-y-full');
+            }
+        });
+        
+        // Active Link Highlighter
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const activeId = entry.target.id;
+                    document.querySelectorAll('.mobile-link').forEach(link => {
+                        const linkHref = link.getAttribute('href').substring(1);
+                        if (linkHref === activeId) {
+                            link.classList.remove('bg-gray-100', 'text-gray-700');
+                            link.classList.add('bg-template-ocre', 'text-white', 'shadow-md');
+                            link.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+                        } else {
+                            link.classList.add('bg-gray-100', 'text-gray-700');
+                            link.classList.remove('bg-template-ocre', 'text-white', 'shadow-md');
+                        }
+                    });
+                }
+            });
+        }, { rootMargin: '-40% 0px -60% 0px' });
+
+        document.querySelectorAll('div[id^="jour-"], section#pratique').forEach(s => observer.observe(s));
+    </script>
+</body>
+</html>
